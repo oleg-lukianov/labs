@@ -1,7 +1,7 @@
 #!/bin/bash
 version="1.0.1";
 version="1.0.2 23.01.2020";
-version="1.0.3 22.09.2020";
+version="1.0.3 2209.2020";
 
 inet=`ifconfig -a | grep -oE "^[a-z0-9]+" | uniq`;
 mass=();
