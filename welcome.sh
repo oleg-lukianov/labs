@@ -28,3 +28,4 @@ echo -e "\e[0;91m
         \e[0;94m CPU\e[0m = \e[0;93m$CPUcount x $CPUmodel\e[0m
      \e[0;94m Memory\e[0m = \e[0;93m`cat /proc/meminfo | grep MemTotal | awk '{printf"%d", $2/1024}'` Mb\e[0m
 \e[0;91m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\e[0m"
+
