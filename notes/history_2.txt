@@ -1,0 +1,407 @@
+    1  yum install git
+    2  yum install mc
+    3  mc
+    4  exit
+    5  mkdir test
+    6  git clone https://github.com/oleg-lukianov/lauch-3.git
+    7  mkdir my-repo
+    8  cd my-repo/
+    9  touch 1.txt
+   10  touch 2.txt
+   11  touch new.json
+   12  git init
+   13  ll
+   14  ls -la
+   15  git status
+   16  git add .
+   17  git status
+   18  git commit -m "First commit"
+   19  git status
+   20  git log
+   21  rpm -qa | grep vim | sort
+   22  vi os-release 
+   23  vi sudo-ldap.conf 
+   24  vim sudo-ldap.conf 
+   25  git log
+   26  git remote -v
+   27  git remote add origin https://github.com/oleg-lukianov/launch-3.git
+   28  git remote -v
+   29  git push origin master
+   30  ssh-keygen
+   31  ll ~/.ssh
+   32  cat ~/.ssh/id_rsa.pub
+   33  git remote add ssh git@github.com:oleg-lukianov/launch-3.git
+   34  git push ssh master
+   35  git remote -v
+   36  git config --global user.name "Lukianov Oleg"
+   37  git config --global user.email oleg.lukianov8@gmail.com
+   38  ll
+   39  vi new.json
+   40  git status
+   41  git diff
+   42  git commit -m "Add city"
+   43  git log
+   44  git commit -m "Add city"
+   45  git log
+   46  git diff
+   47  git log
+   48  git push ssh master
+   49  git log
+   50  ll
+   51  vi new.json
+   52  git add .
+   53  git commit -m "Add city"
+   54  git log
+   55  git push ssh master
+   56  ll
+   57  vi 1.txt
+   58  git diff
+   59  git restore 1.txt
+   60  git diff
+   61  ll
+   62  vi 1.txt
+   63  git add .
+   64  git commit -m "Test"
+   65  git log
+   66  git reset 487756da6d7c6570deace1a3005b4e884a89ccdc
+   67  git diff
+   68  git log
+   69  git status
+   70  git diff
+   71  git commit -m "Test"
+   72  git push ssh master
+   73  git remote -v
+   74  git pull
+   75  git pull ssh
+   76  git remote -v
+   77  git diff
+   78  git add .
+   79  git commit -m "Test2"
+   80  git push ssh master
+   81  git pull ssh master
+   82  git diff
+   83  git diff
+   84  ll
+   85  git add .
+   86  git commit -m "Test3"
+   87  ll
+   88  vi 1.txt
+   89  git add .
+   90  git status
+   91  git commit -m "Test5"
+   92  git push ssh master
+   93  git diff
+   94  git branch
+   95  git branch -a
+   96  git branch -a
+   97  git branch new-master
+   98  git checkout new-master
+   99  git branch -a
+  100  ll
+  101  vi 1.txt
+  102  git add .
+  103  git commit -m "New branch"
+  104  git checkout master
+  105  ll
+  106  cat 1.txt
+  107  git log
+  108  git merge new-master
+  109  ll
+  110  cat 1.txt
+  111  git status
+  112  git push ssh master
+  113  vi 1.txt
+  114  git add .
+  115  git commit -m "Add Kyiv"
+  116  git checkout new-master
+  117  vi 1.txt
+  118  git add .
+  119  git commit -m "Add Kyiv 2"
+  120  git checkout master
+  121  git merge new-master
+  122  vi 1.txt
+  123  git add .
+  124  git commit -m "Add kiev 3"
+  125  git merge
+  126  vi 1.txt
+  127  cat 1.txt
+  128  git status
+  129  git checkout new-master
+  130  vi 1.txt
+  131  git add .
+  132  git commit -m "Add Kiev 4"
+  133  git checkout master
+  134  git merge
+  135  git branch
+  136  git add .
+  137  git commit -m "Commit"
+  138  git push ssh master
+  139  git checkout new-master
+  140  git add .
+  141  git commit -m "Commit 2"
+  142  git push ssh master
+  143  git merge
+  144  git merge new-master
+  145  git checkout master
+  146  git merge new-master
+  147  vi 1.txt
+  148  git add .
+  149  git commit -m "Merge fixed"
+  150  git push ssh master
+  151  vi 
+  152  vi vimrc 
+  153  ll
+  154  vi 1.txt
+  155  vi new.json
+  156  exit
+  157  mc
+  158  vi new.json
+  159  vim new.json
+  160  vi vimrc 
+  161  vi virc 
+  162  vi new.json 
+  163  vi my.yaml
+  164  rm my.yaml
+  165  git checkout -b pull-request
+  166  vi my.yaml
+  167  git status
+  168  git add .
+  169  git commit -m "Create yaml"
+  170  git push ssh pull-request
+  171  git branch
+  172  git checkout master
+  173  git pull ssh master
+  174  vim my.yaml
+  175  git add .
+  176  git commit -m "Add yaml"
+  177  git tag v1.0
+  178  git push ssh master --tags
+  179  git status
+  180  vim my.yaml
+  181  git add .
+  182  git commit -m "Add yaml 2"
+  183  git tag v1.1
+  184  git push ssh master --tags
+  185  ll
+  186  cd ..
+  187  mkdir labs
+  188  ll
+  189  cd labs
+  190  ll
+  191  touch welcome.sh
+  192  git remote -v
+  193  git init
+  194  git remote -v
+  195  git remote add labs git@github.com:oleg-lukianov/labs.git
+  196  git remote -v
+  197  git status
+  198  git add .
+  199  git commit -m "Create empty file"
+  200  git push git branch
+  201  git branch
+  202  git push labs master
+  203  history > history_1.txt
+  204  vim welcome.sh 
+  205  which bash
+  206  chmod +x welcome.sh 
+  207  ./welcome.sh 
+  208  git add .
+  209  git commit -m "Add data in script"
+  210  git push labs master
+  211  pwd
+  212  ln -s /root/test/labs/welcome.sh /etc/profile.d/welcome.sh
+  213  git branch devops
+  214  git branch
+  215  git checkout devops
+  216  vim welcome.sh
+  217  ./welcome.sh
+  218  vim welcome.sh
+  219  git add .
+  220  git commit -m "Change 27 row"
+  221  git push labs devops
+  222  git checkout master
+  223  git branch
+  224  git merge
+  225  git merge devops
+  226  git push labs master
+  227  git checkout -b pull-request
+  228  git push ssh pull-request
+  229  git push labs pull-request
+  230  git branch
+  231  git checkout master
+  232  vi welcome.sh
+  233  git add .
+  234  git commit -m "Restore to original source"
+  235  git push labs master
+  236  git checkout pull-request
+  237  vi welcome.sh
+  238  git add .
+  239  git commit -m "Modify script"
+  240  vi welcome.sh
+  241  git add .
+  242  git commit -m "Modify script"
+  243  git push labs pull-request
+  244  vi welcome.sh
+  245  git add .
+  246  git commit -m "Modify script finally"
+  247  git push labs pull-request
+  248  vi welcome.sh
+  249  git branch
+  250  git checkout master
+  251  git branch
+  252  git log
+  253  git pull labs pull-request
+  254  vi welcome.sh
+  255  git branch
+  256  git checkout master
+  257  git
+  258  git restore welcome.s
+  259  git restore welcome.sh
+  260  git diff
+  261  git checkout master
+  262  git diff
+  263  vi welcome.sh
+  264  git checkout devops
+  265  vi welcome.sh
+  266  vi welcome.sh
+  267  echo > welcome.sh
+  268  git add .
+  269  git commit -m "Empty file"
+  270  git push labs devops
+  271  vi welcome.sh
+  272  vi welcome.sh
+  273  git add .
+  274  git commit -m "Restore to original"
+  275  git push labs devops
+  276  vi welcome.sh
+  277  git add .
+  278  git commit -m "Modify script"
+  279  git push labs devops
+  280  git checkout master
+  281  git merge devops
+  282  git diff
+  283  git branch
+  284  git log
+  285  git status
+  286  git branch
+  287  git push labs master
+  288  git diff
+  289  systemctl shutdown -i
+  290  man systemctl
+  291  systemctl poweroff
+  292  yum update
+  293  man git
+  294  mc
+  295  vi history_1.txt 
+  296  vi os-release 
+  297  uname
+  298  uname -a
+  299  uname -or
+  300  vi history_1.txt 
+  301  mc
+  302  ll
+  303  yum install docker
+  304  systemctl docket start
+  305  systemctl docker start
+  306  systemctl start docker
+  307  systemctl status docker
+  308  docker ps
+  309  docker ps
+  310  docker ps -A
+  311  docker ps -a
+  312  docker run ubuntu /bin/echo 'Hello world'
+  313  docker ps -a
+  314  docker run -i -t --rm ubuntu /bin/bash
+  315  docker run --name daemon -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+  316  docker ps
+  317  docker exec -it daemon bash
+  318  docker ps
+  319  docker logs bd709fde8ec8
+  320  docker ps
+  321  dockr inspect bd709fde8ec8
+  322  docker inspect bd709fde8ec8
+  323  docker stats bd709fde8ec8
+  324  yum update
+  325  systemctl poweroff
+  326  mc
+  327  ll
+  328  history > history_2.txt
+  329  systemctl status docker
+  330  systemctl start docker
+  331  docker ps
+  332  docker run -e MYSQL_ROOT_PASSWORD=12345 mysql
+  333  docker run -e MYSQL_ROOT_PASSWORD=12345 -v ${PWD}/mysql_data:/var/lib/mysql  mysql
+  334  vi welcome.sh 
+  335  ./welcome.sh
+  336  docker ps
+  337  docker inspect dd6d54f1f7fe
+  338  ll /var/lib/docker/volumes/95ad4436447f1879dfa3b5a578a28c400dc835eea6ea98ea54a6c95d2365ed65/_data
+  339  docker stop dd6d54f1f7fe
+  340  docker ps
+  341  ll
+  342  touch dockerfile.curl
+  343  vi dockerfile.curl
+  344  git clone https://github.com/Dgadavin/devopsology-base-course.git
+  345  docker build -t curl:1.0 -f Dockerfile.curl .
+  346  docker images
+  347  docker login
+  348  docker images
+  349  docker tag curl:1.0 10248620/curl-test:1.0
+  350  docker push 10248620/curl-test:1.0
+  351  docker images
+  352  docker run --rm  -v ${PWD}/test_curl:/data curl:1.0
+  353  cd test_curl
+  354  ll
+  355  tail results
+  356  ll
+  357  git pull
+  358  git clone https://github.com/Dgadavin/devopsology-base-course.git
+  359  git status
+  360  git pull
+  361  git remote -v
+  362  git branch
+  363  git clone https://github.com/Dgadavin/devopsology-base-course.git
+  364  ll
+  365  ifconfig
+  366  docker build -t arg -f Dockerfile.arg .
+  367  vi Dockerfile.arg
+  368  docker build -t arg -f Dockerfile.arg .
+  369  ll
+  370  ll tmp
+  371  ll
+  372  docker build -t new-nginx container -f Dockerfile.nginx .
+  373  docker build -t new-nginx -f Dockerfile.nginx .
+  374  docker run -p 8080:80 new-nginx:latest
+  375  ll
+  376  vi Dockerfile.multi 
+  377  docker build -t golang:1.0 -f Dockerfile.multi .
+  378  docker ps
+  379  docker images
+  380  vim Dockerfile.multi 
+  381  docker build -t golang:2.0 -f Dockerfile.multi .
+  382  docker images
+  383  vim docker-compose.yml 
+  384  docker 
+  385  docker stats
+  386  docker ps
+  387  docker kill aa0d988d6279
+  388  docker kill e778503962e8
+  389  docker ps
+  390  git clone https://github.com/Dgadavin/devopsology-base-course.git
+  391  ll
+  392  vi Dockerfile.curl 
+  393  systemctl poweroff
+  394  mc
+  395  vi Dockerfile.curl 
+  396  vi Dockerfile.arg 
+  397  mc
+  398  vi Dockerfile.lab2 
+  399  vi entrypoint.sh
+  400  which sh > entrypoint.sh
+  401  chmod +x
+  402  vi entrypoint.sh 
+  403  chmod +x entrypoint.sh 
+  404  vi entrypoint.sh 
+  405  vi Dockerfile.lab2 
+  406  vim Dockerfile.lab2 
+  407  history > history_2.txt 

@@ -1,0 +1,202 @@
+    1  yum install git
+    2  yum install mc
+    3  mc
+    4  exit
+    5  mkdir test
+    6  git clone https://github.com/oleg-lukianov/lauch-3.git
+    7  mkdir my-repo
+    8  cd my-repo/
+    9  touch 1.txt
+   10  touch 2.txt
+   11  touch new.json
+   12  git init
+   13  ll
+   14  ls -la
+   15  git status
+   16  git add .
+   17  git status
+   18  git commit -m "First commit"
+   19  git status
+   20  git log
+   21  rpm -qa | grep vim | sort
+   22  vi os-release 
+   23  vi sudo-ldap.conf 
+   24  vim sudo-ldap.conf 
+   25  git log
+   26  git remote -v
+   27  git remote add origin https://github.com/oleg-lukianov/launch-3.git
+   28  git remote -v
+   29  git push origin master
+   30  ssh-keygen
+   31  ll ~/.ssh
+   32  cat ~/.ssh/id_rsa.pub
+   33  git remote add ssh git@github.com:oleg-lukianov/launch-3.git
+   34  git push ssh master
+   35  git remote -v
+   36  git config --global user.name "Lukianov Oleg"
+   37  git config --global user.email oleg.lukianov8@gmail.com
+   38  ll
+   39  vi new.json
+   40  git status
+   41  git diff
+   42  git commit -m "Add city"
+   43  git log
+   44  git commit -m "Add city"
+   45  git log
+   46  git diff
+   47  git log
+   48  git push ssh master
+   49  git log
+   50  ll
+   51  vi new.json
+   52  git add .
+   53  git commit -m "Add city"
+   54  git log
+   55  git push ssh master
+   56  ll
+   57  vi 1.txt
+   58  git diff
+   59  git restore 1.txt
+   60  git diff
+   61  ll
+   62  vi 1.txt
+   63  git add .
+   64  git commit -m "Test"
+   65  git log
+   66  git reset 487756da6d7c6570deace1a3005b4e884a89ccdc
+   67  git diff
+   68  git log
+   69  git status
+   70  git diff
+   71  git commit -m "Test"
+   72  git push ssh master
+   73  git remote -v
+   74  git pull
+   75  git pull ssh
+   76  git remote -v
+   77  git diff
+   78  git add .
+   79  git commit -m "Test2"
+   80  git push ssh master
+   81  git pull ssh master
+   82  git diff
+   83  git diff
+   84  ll
+   85  git add .
+   86  git commit -m "Test3"
+   87  ll
+   88  vi 1.txt
+   89  git add .
+   90  git status
+   91  git commit -m "Test5"
+   92  git push ssh master
+   93  git diff
+   94  git branch
+   95  git branch -a
+   96  git branch -a
+   97  git branch new-master
+   98  git checkout new-master
+   99  git branch -a
+  100  ll
+  101  vi 1.txt
+  102  git add .
+  103  git commit -m "New branch"
+  104  git checkout master
+  105  ll
+  106  cat 1.txt
+  107  git log
+  108  git merge new-master
+  109  ll
+  110  cat 1.txt
+  111  git status
+  112  git push ssh master
+  113  vi 1.txt
+  114  git add .
+  115  git commit -m "Add Kyiv"
+  116  git checkout new-master
+  117  vi 1.txt
+  118  git add .
+  119  git commit -m "Add Kyiv 2"
+  120  git checkout master
+  121  git merge new-master
+  122  vi 1.txt
+  123  git add .
+  124  git commit -m "Add kiev 3"
+  125  git merge
+  126  vi 1.txt
+  127  cat 1.txt
+  128  git status
+  129  git checkout new-master
+  130  vi 1.txt
+  131  git add .
+  132  git commit -m "Add Kiev 4"
+  133  git checkout master
+  134  git merge
+  135  git branch
+  136  git add .
+  137  git commit -m "Commit"
+  138  git push ssh master
+  139  git checkout new-master
+  140  git add .
+  141  git commit -m "Commit 2"
+  142  git push ssh master
+  143  git merge
+  144  git merge new-master
+  145  git checkout master
+  146  git merge new-master
+  147  vi 1.txt
+  148  git add .
+  149  git commit -m "Merge fixed"
+  150  git push ssh master
+  151  vi 
+  152  vi vimrc 
+  153  ll
+  154  vi 1.txt
+  155  vi new.json
+  156  exit
+  157  vi new.json
+  158  vim new.json
+  159  vi vimrc 
+  160  vi virc 
+  161  vi new.json 
+  162  vi my.yaml
+  163  rm my.yaml
+  164  git checkout -b pull-request
+  165  vi my.yaml
+  166  git status
+  167  git add .
+  168  git commit -m "Create yaml"
+  169  git push ssh pull-request
+  170  git branch
+  171  git checkout master
+  172  git pull ssh master
+  173  vim my.yaml
+  174  git add .
+  175  git commit -m "Add yaml"
+  176  git tag v1.0
+  177  git push ssh master --tags
+  178  git status
+  179  vim my.yaml
+  180  git add .
+  181  git commit -m "Add yaml 2"
+  182  git tag v1.1
+  183  git push ssh master --tags
+  184  ll
+  185  cd ..
+  186  mkdir labs
+  187  ll
+  188  cd labs
+  189  ll
+  190  touch welcome.sh
+  191  git remote -v
+  192  git init
+  193  git remote -v
+  194  git remote add labs git@github.com:oleg-lukianov/labs.git
+  195  git remote -v
+  196  git status
+  197  git add .
+  198  git commit -m "Create empty file"
+  199  git push git branch
+  200  git branch
+  201  git push labs master
+  202  history > history_1.txt
