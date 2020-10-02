@@ -1,4 +1,4 @@
-pipelineJob("build-docker-image") {
+pipelineJob("lab3-build-docker-image") {
         logRotator {
             numToKeep(10)
         }
