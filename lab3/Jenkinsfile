@@ -1,59 +1,22 @@
 node {
-    timeout(20){
+    timeout(600){
     try {
-        deleteDir() // Clean the workspace
-        notifyBuild()
-        stage('Checkout') {
-            git branch: 'master',
-                url: 'https://github.com/Dgadavin/devopsology-base-course.git'
+        //deleteDir() // Clean the workspace
+        stage('First stage') {
+            git branch: 'pull-request',
+                url: 'https://github.com/oleg-lukianov/labs.git'
+            readFile encoding: 'utf-8', file: 'lab2/Dockerfile.nginx'
+            sh 'whoami'
+            sh 'cd lab2 && sudo docker build -t nginx_lab2:1.0 -f Dockerfile.nginx .'
+            sh 'sudo docker run -d -p 443:80 -e MY_NAME=Oleg nginx_lab2:1.0'
+            sh 'sudo docker tag nginx_lab2:1.0 10248620/nginx_lab2:1.0'
+            sh 'sudo docker push 10248620/nginx_lab2:1.0'
 
         }
-        stage('Print Hello') {
-            sh 'echo Hello world'
-        }
-
-        if (env.ENV == "dev") {
-        stage('Run the tests') {
-            sh 'echo "Hello. here from tests"'
-        }
-      }
-      else {
-        stage('Run the new test') {
-            sh 'echo "Hello. here from tests"'
-        }
-      }
     } catch (e) {
         sh 'exit 1'
         currentBuild.result = "FAILED"
         throw e
-        } finally {
-        notifyBuild(currentBuild.result)
     }
 }
-}
-def notifyBuild(String buildStatus = 'STARTED') {
-  // build status of null means successful
-  buildStatus =  buildStatus ?: 'SUCCESS'
-
-  // Default values
-  def colorName = 'RED'
-  def colorCode = '#FF0000'
-  def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-  def summary = "${subject} (${env.BUILD_URL})"
-
-  // Override default values based on build status
-  if (buildStatus == 'STARTED') {
-    color = 'YELLOW'
-    colorCode = '#FFFF00'
-  } else if (buildStatus == 'SUCCESS') {
-    color = 'GREEN'
-    colorCode = '#00FF00'
-  } else {
-    color = 'RED'
-    colorCode = '#FF0000'
-    summary = "@nick @channel ${subject} (${env.BUILD_URL})"
-  }
-
-  // Send notifications
-  // slackSend (channel: '#Your Slack channel', color: colorCode, message: summary)
 }
