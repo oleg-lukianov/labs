@@ -7,8 +7,9 @@ node {
                 url: 'https://github.com/oleg-lukianov/labs.git'
             readFile encoding: 'utf-8', file: 'lab2/Dockerfile.nginx'
             sh 'whoami'
+            sh 'sudo docker kill nginx_lab2'
             sh 'cd lab2 && sudo docker build -t nginx_lab2:1.0 -f Dockerfile.nginx .'
-            sh 'sudo docker run -d -p 443:80 -e MY_NAME=Oleg nginx_lab2:1.0'
+            sh 'sudo docker run -d -p 443:80 -e MY_NAME=Oleg --name nginx_lab2 nginx_lab2:1.0'
             sh 'sudo docker tag nginx_lab2:1.0 10248620/nginx_lab2:1.0'
             sh 'sudo docker push 10248620/nginx_lab2:1.0'
 

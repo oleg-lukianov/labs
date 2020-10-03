@@ -1,0 +1,7 @@
+- hosts: virt_centos
+  become: true
+  vars:
+    admin_group: avalaunch
+  roles:
+#    - admin-users
+    - create-nginx
