@@ -1,1 +1,1 @@
-ansible-playbook playbook.yaml -i hosts -u oleg
+ansible-playbook playbook.yaml -i hosts -u oleg -t nginx
