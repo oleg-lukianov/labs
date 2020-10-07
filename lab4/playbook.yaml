@@ -1,0 +1,9 @@
+- hosts: virt_centos
+  become: true
+  vars:
+    admin_group: avalaunch
+    nginx_port: 8080
+    MY_NAME: Oleg
+  roles:
+    - admin-users
+    - create-nginx

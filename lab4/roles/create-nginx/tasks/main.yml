@@ -1,0 +1,43 @@
+---
+- name: Install with yum
+  yum:
+    name: nginx.x86_64
+    state: latest
+  tags:
+    - nginx
+
+- name: Copy config nginx.conf
+  template:
+    src: nginx.j2
+    dest: /etc/nginx/nginx.conf
+    owner: nginx
+    group: nginx
+    mode: 0644
+  tags:
+    - nginx
+
+- name: Copy config index.html
+  template:
+    src: index.j2
+    dest: /usr/share/nginx/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - nginx
+
+- name: Systemctl start nginx
+  service:
+    name: nginx
+    state: restarted
+  tags:
+    - nginx
+
+- name: Systemctl enable nginx
+  service:
+    name: nginx
+    enabled: yes
+  tags:
+    - nginx
+
+
