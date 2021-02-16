@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+  namespace: lukianov
+  labels:
+    app: nginx
+data:
+  HOST: example.com
+  PORT: "8080"
+  name: OLEG

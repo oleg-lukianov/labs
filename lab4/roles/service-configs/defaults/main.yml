@@ -1,0 +1,9 @@
+env: test
+deploy_user: oleg
+service:
+  s3:
+    bucket_name: my-test-bucket
+  db:
+    username: simple
+    name: test_db
+    host: db.test-avalauch.aval

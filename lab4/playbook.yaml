@@ -7,3 +7,4 @@
   roles:
     - admin-users
     - create-nginx
+    - service-configs
